@@ -156,33 +156,18 @@
         app:layout_constraintVertical_bias="0.363" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="105dp"
-        android:layout_height="34dp"
-        android:background="#2196F3"
-        android:text="Enter"
-        android:textColor="#000000"
-        android:textColorLink="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
-        app:layout_constraintVertical_bias="0.151" />
-
-    <Button
         android:id="@+id/button6"
         android:layout_width="105dp"
         android:layout_height="34dp"
         android:background="#2196F3"
-        android:text="View Progess"
+        android:text="Next"
         android:textColor="#000000"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.174" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
