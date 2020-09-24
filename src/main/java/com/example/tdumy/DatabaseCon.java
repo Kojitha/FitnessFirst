@@ -54,24 +54,7 @@ public class DatabaseCon extends SQLiteOpenHelper {
             return true;
         }
     }
-    public SimpleCursorAdapter populateListViewFromDB(){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cs = sqLiteDatabase.rawQuery("select * from "+TABLE_NAME,null);
-        String[] fromFieldsNames = new String[]{
-                DatabaseCon.COL_1,DatabaseCon.COL_2,DatabaseCon.COL_3
-        };
-        int[] toViewIDs = new int[]{R.id.water,R.id.wakeup,R.id.gotobed};
-        SimpleCursorAdapter contactAdapter = new SimpleCursorAdapter(
-                context,
-                R.layout.history_main,
-                cs,
-                fromFieldsNames,
-                toViewIDs
-        );
-        return contactAdapter;
-    }
-
-
+    
 
     public Cursor getallData() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
