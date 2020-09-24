@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reminders">
+    tools:context=".Reminders"
+    android:background="@drawable/hh">
 
     <TextView
         android:id="@+id/textView3"
@@ -90,11 +91,15 @@
         android:layout_height="53dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:padding="12dp"
+        android:gravity="center"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.39"
+        android:background="@drawable/border_radius"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -102,11 +107,15 @@
         android:layout_height="53dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:padding="12dp"
+        android:gravity="center"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.663"
+        android:background="@drawable/border_radius"/>
 
     <TextView
         android:id="@+id/textView"
@@ -115,6 +124,7 @@
         android:text="AM"
         android:textAlignment="viewEnd"
         android:textSize="18sp"
+        android:padding="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.804"
@@ -129,6 +139,7 @@
         android:text="PM"
         android:textAlignment="viewEnd"
         android:textSize="18sp"
+        android:padding="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.804"
@@ -151,6 +162,7 @@
         android:id="@+id/imageView3"
         android:layout_width="130dp"
         android:layout_height="87dp"
+        android:padding="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.925"
