@@ -1,10 +1,16 @@
 package com.example.tdumy;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,48 +19,53 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseCon myDB;
-    EditText editwater,editwakeup,editgotup;
+    EditText editwater, editwakeup, editgotup;
     Button btnAddData;
     Button btnViewAll;
     Button btnrr;
 
+   // @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDB = new DatabaseCon(this);//Calling Constructor
 
+        //createNotificationChannel();
+
         //Geting values
-        editwater = (EditText)findViewById(R.id.water);
-        editwakeup = (EditText)findViewById(R.id.wakeup);
-        editgotup = (EditText)findViewById(R.id.gotobed);
-        btnAddData = (Button)findViewById(R.id.button_w1);
-        btnViewAll = (Button)findViewById(R.id.button_view);
+        editwater = (EditText) findViewById(R.id.water);
+        editwakeup = (EditText) findViewById(R.id.wakeup);
+        editgotup = (EditText) findViewById(R.id.gotobed);
+        btnAddData = (Button) findViewById(R.id.button_w1);
+        btnViewAll = (Button) findViewById(R.id.button_view);
 
         AddData();
         viewAll();
 
     }
-    public void AddData(){
+
+    public void AddData() {
         btnAddData.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        //Inserting Got values using insertData Constructor
-                        boolean isInserted = myDB.insertData(editwater.getText().toString(),editwakeup.getText().toString(),editgotup.getText().toString() );
-                    if(isInserted==true){
-                        Toast.makeText(MainActivity.this,"Successfully Inserted",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this,History.class);
+                view -> {
+                    //Inserting Got values using insertData Constructor
+                    boolean isInserted = myDB.insertData(editwater.getText().toString(), editwakeup.getText().toString(), editgotup.getText().toString());
+                    if (isInserted == true) {
+                        Toast.makeText(MainActivity.this, "Successfully Inserted", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(MainActivity.this, History.class);
                         startActivity(intent);
-                    }
-                    else{
-                        Toast.makeText(MainActivity.this,"Not Inserted",Toast.LENGTH_LONG).show();
+
+
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "Not Inserted", Toast.LENGTH_LONG).show();
                     }
 
-                    }
                 }
         );
     }
+
+
 
 
 

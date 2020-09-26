@@ -4,21 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="407dp"
-        android:layout_height="597dp"
-        android:background="@drawable/w2"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.0" />
+    tools:context=".MainActivity"
+    android:background="@drawable/w2">
 
     <Button
         android:id="@+id/button_w1"
@@ -47,54 +34,39 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/header" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="288dp"
-        android:layout_height="31dp"
-        android:text="Enter"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.282" />
 
     <EditText
         android:id="@+id/water"
         android:layout_width="290dp"
         android:layout_height="53dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/border_radius"
         android:ems="10"
         android:gravity="center"
+        android:hint="Your daily water consumption"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Your daily water consumption"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.379" />
+        app:layout_constraintVertical_bias="0.364" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="332dp"
         android:layout_height="63dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="sans-serif"
         android:hint="Water Consumption"
         android:textColor="#FFFFFF"
+        android:textColorHighlight="#932A2A"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.582"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/wakeup"

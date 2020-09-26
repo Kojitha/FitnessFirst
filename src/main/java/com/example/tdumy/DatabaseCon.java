@@ -5,18 +5,17 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.ColorSpace;
-import android.provider.SyncStateContract;
-import android.view.Display;
-import android.widget.SimpleCursorAdapter;
+import android.database.sqlite.SQLiteStatement;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
-import java.nio.ByteOrder;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class DatabaseCon extends SQLiteOpenHelper {
     Context context;
+    SQLiteDatabase sqLiteDatabase;
 
     public static final String DATABASE_NAME = "water.db";
     public static final String TABLE_NAME = "water_consumption";
@@ -80,5 +79,49 @@ public class DatabaseCon extends SQLiteOpenHelper {
         }
         cs.close();
         return arrayList;
+    }
+
+    public void updateInfo(String water, String wakeup, String gotobed) {
+        sqLiteDatabase = getWritableDatabase();
+        String updateQuery = "UPDATE " + TABLE_NAME + " SET wakeup = ?, gotobed = ? WHERE dailywater = ?";
+        SQLiteStatement statement = sqLiteDatabase.compileStatement(updateQuery);
+        statement.clearBindings();
+
+        statement.bindString(1, wakeup);
+        statement.bindString(2, gotobed);
+        statement.bindString(3, water);
+
+        statement.execute();
+    }
+
+    public void deleteData(String water) {
+        sqLiteDatabase = getWritableDatabase();
+
+        String deleteQuery = "DELETE FROM " + TABLE_NAME + " WHERE dailywater = ?";
+        SQLiteStatement statement = sqLiteDatabase.compileStatement(deleteQuery);
+        statement.clearBindings();
+
+        statement.bindString(1, water);
+        statement.execute();
+    }
+
+    public Model selectModel(String id) {
+        sqLiteDatabase = getReadableDatabase();
+        Model model = new Model();
+
+        String select = "SELECT * FROM " +TABLE_NAME + " WHERE " + COL_1;
+        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
+
+        if (cursor.moveToFirst() ) {
+            model.setWater(cursor.getString(0));
+            model.setWakeup(cursor.getString(1));
+            model.setGotup(cursor.getString(2));
+
+            cursor.close();
+            return model;
+        }
+        else {
+            return null;
+        }
     }
 }

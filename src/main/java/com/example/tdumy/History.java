@@ -2,14 +2,12 @@ package com.example.tdumy;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.database.Cursor;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,8 +16,12 @@ public class History extends AppCompatActivity {
     ActionBar actionBar;
     ListView listView;
     Adapter adapter = null;
-    DatabaseCon myDB;
+    static DatabaseCon myDB;
     ArrayList<Model> arrayList = new ArrayList<>();
+    private AdapterView<?> parent;
+    private View view;
+    private int position;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,31 @@ public class History extends AppCompatActivity {
         myDB = new DatabaseCon(this);//Calling Constructor
         listView = findViewById(R.id.lvContact);
         RetriveProductList();
+
+        //listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Model selectmodel;
+                //All dats pass
+                selectmodel = adapter.getItem(position);
+
+                String water = selectmodel.getWater();
+                String wakeup = selectmodel.getWakeup();
+                String gotobed = selectmodel.getGotup();
+
+                Intent intent = new Intent(History.this, Edit.class);
+                intent.putExtra("water",water);
+                intent.putExtra("wakeup",wakeup);
+                intent.putExtra("gotobed",gotobed);
+
+                startActivity(intent);
+                finish();
+                Toast.makeText(History.this, wakeup, Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     private void RetriveProductList() {

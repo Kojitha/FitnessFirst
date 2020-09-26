@@ -18,6 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".History"></activity>
+        <activity android:name=".Edit"></activity>
+
+        <receiver android:name=".ReminderToUser"/>
         
     </application>
 
