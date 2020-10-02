@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/abc"
+    android:layout_height="758dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="55dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="417dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/homefinal" />
+
+
+    <ImageView
+        android:id="@+id/profileIv"
+        android:layout_width="412dp"
+        android:layout_height="303dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="398dp"
+        android:src="@drawable/ic_action_profile" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="345dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="313dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Person Name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="143dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="246dp"
+        android:layout_marginTop="446dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="284dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Person Age"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="246dp"
+        android:layout_marginTop="511dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="219dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Person Weight"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="574dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="151dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Person Height"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/editBtn"
+        android:layout_width="45dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="362dp"
+        android:layout_marginBottom="607dp"
+        android:background="@null"
+        android:src="@drawable/ic_action_edit" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="272dp"
+        android:background="@drawable/inputb"
+        android:fontFamily="sans-serif-black"
+        android:text="Age"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="504dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginBottom="208dp"
+        android:background="@drawable/inputb"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Gender"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="569dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginBottom="146dp"
+        android:background="@drawable/inputb"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Phone"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/calculatebmi"
+        android:layout_width="129dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/gain"
+        android:onClick="calculateBMI"
+        android:text="Calculate BMI"
+
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>
+
