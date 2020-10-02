@@ -53,14 +53,6 @@ public class DatabaseCon extends SQLiteOpenHelper {
             return true;
         }
     }
-    
-
-    public Cursor getallData() {
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        //Cursor - Random Read and Write Access
-        Cursor cs = sqLiteDatabase.rawQuery("select * from " + TABLE_NAME, null);
-        return cs;
-    }
 
     public ArrayList<Model> getAllData() {
         ArrayList<Model> arrayList = new ArrayList<>();

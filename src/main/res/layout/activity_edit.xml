@@ -1,60 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@drawable/im3">
 
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="299dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="80dp"
+
+        android:fontFamily="sans-serif-black"
+        android:lineSpacingExtra="-3sp"
+        android:text="Update Information"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textColorHighlight="#932A2A"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="476dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/header" />
 
     <EditText
         android:id="@+id/waterE"
-        android:layout_width="290dp"
-        android:layout_height="53dp"
+        android:layout_width="272dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/border_radius"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Your daily water consumption"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
 
     <EditText
         android:id="@+id/wakeupE"
         android:layout_width="290dp"
         android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/border_radius"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="wake up"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
 
     <EditText
         android:id="@+id/gotobedE"
         android:layout_width="290dp"
         android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/border_radius"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Go to bed"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/buutton"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
+        android:onClick="edit"
         android:text="Edit"
-        android:onClick="edit"/>
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/buutton"
+        android:onClick="deleteInfo"
+        android:text="Delete"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="Delete"
-        android:onClick="deleteInfo"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="344dp"
+        android:layout_height="34dp"
+
+        android:fontFamily="sans-serif-thin"
+        android:lineSpacingExtra="-3sp"
+        android:text="Approximatly One Cup = 150ml "
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textColorHighlight="#932A2A"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

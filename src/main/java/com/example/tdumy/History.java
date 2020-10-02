@@ -37,7 +37,7 @@ public class History extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
                 Model selectmodel;
-                //All dats pass
+                //All data pass
                 selectmodel = adapter.getItem(position);
 
                 String water = selectmodel.getWater();

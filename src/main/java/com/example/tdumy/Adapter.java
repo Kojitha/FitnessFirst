@@ -39,9 +39,9 @@ public class Adapter extends ArrayAdapter<Model> {
         TextView tvWakeUp = convertView.findViewById(R.id.wakeup);
         TextView tvGoToBed = convertView.findViewById(R.id.gotobed);
 
-        tvWater.setText(water);
-        tvWakeUp.setText(wakeUp);
-        tvGoToBed.setText(goToBed);
+        tvWater.setText(water + "ml");
+        tvWakeUp.setText(wakeUp + "am");
+        tvGoToBed.setText(goToBed + "pm");
 
         return convertView;
     }
