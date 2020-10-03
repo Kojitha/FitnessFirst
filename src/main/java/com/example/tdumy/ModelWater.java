@@ -1,11 +1,11 @@
 package com.example.tdumy;
 
-public class Model {
+public class ModelWater {
     String water,wakeup,gotup;
 
-    public Model(){}
+    public ModelWater(){}
 
-    public Model(String water, String wakeup, String gotup) {
+    public ModelWater(String water, String wakeup, String gotup) {
         this.water = water;
         this.wakeup = wakeup;
         this.gotup = gotup;

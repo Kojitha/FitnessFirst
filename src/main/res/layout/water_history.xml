@@ -8,7 +8,6 @@
     app:cardUseCompatPadding="true"
     app:contentPadding="3dp"
     app:cardElevation="3dp"
-    android:background="#24E5DF"
     >
 
 

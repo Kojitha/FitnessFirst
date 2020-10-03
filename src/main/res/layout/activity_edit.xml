@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.426" />
 
-    <EditText
+    <TextView
         android:id="@+id/wakeupE"
         android:layout_width="290dp"
         android:layout_height="53dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.56" />
 
-    <EditText
+    <TextView
         android:id="@+id/gotobedE"
         android:layout_width="290dp"
         android:layout_height="53dp"

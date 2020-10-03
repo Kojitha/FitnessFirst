@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class History extends AppCompatActivity {
     ActionBar actionBar;
     ListView listView;
-    Adapter adapter = null;
+    AdapterWater adapterWater = null;
     static DatabaseCon myDB;
-    ArrayList<Model> arrayList = new ArrayList<>();
+    ArrayList<ModelWater> arrayList = new ArrayList<>();
     private AdapterView<?> parent;
     private View view;
     private int position;
@@ -36,9 +36,9 @@ public class History extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                Model selectmodel;
+                ModelWater selectmodel;
                 //All data pass
-                selectmodel = adapter.getItem(position);
+                selectmodel = adapterWater.getItem(position);
 
                 String water = selectmodel.getWater();
                 String wakeup = selectmodel.getWakeup();
@@ -61,8 +61,8 @@ public class History extends AppCompatActivity {
         myDB = new DatabaseCon(this);
 
         arrayList = myDB.getAllData();
-        adapter = new Adapter(this, R.layout.water_history, arrayList);
-        listView.setAdapter(adapter);
+        adapterWater = new AdapterWater(this, R.layout.water_history, arrayList);
+        listView.setAdapter(adapterWater);
     }
 
 

@@ -6,11 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
-import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
-import java.sql.Statement;
 import java.util.ArrayList;
 
 public class DatabaseCon extends SQLiteOpenHelper {
@@ -54,19 +52,19 @@ public class DatabaseCon extends SQLiteOpenHelper {
         }
     }
 
-    public ArrayList<Model> getAllData() {
-        ArrayList<Model> arrayList = new ArrayList<>();
+    public ArrayList<ModelWater> getAllData() {
+        ArrayList<ModelWater> arrayList = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         Cursor cs = sqLiteDatabase.rawQuery(selectQuery, null);
 
         if (cs.moveToFirst()) {
             do {
-                Model model = new Model();
-                model.setWater(cs.getString(0));
-                model.setWakeup(cs.getString(1));
-                model.setGotup(cs.getString(2));
-                arrayList.add(model);
+                ModelWater modelWater = new ModelWater();
+                modelWater.setWater(cs.getString(0));
+                modelWater.setWakeup(cs.getString(1));
+                modelWater.setGotup(cs.getString(2));
+                arrayList.add(modelWater);
             } while (cs.moveToNext());
         }
         cs.close();
@@ -97,20 +95,20 @@ public class DatabaseCon extends SQLiteOpenHelper {
         statement.execute();
     }
 
-    public Model selectModel(String id) {
+    public ModelWater selectModel(String id) {
         sqLiteDatabase = getReadableDatabase();
-        Model model = new Model();
+        ModelWater modelWater = new ModelWater();
 
         String select = "SELECT * FROM " +TABLE_NAME + " WHERE " + COL_1;
         Cursor cursor = sqLiteDatabase.rawQuery(select, null);
 
         if (cursor.moveToFirst() ) {
-            model.setWater(cursor.getString(0));
-            model.setWakeup(cursor.getString(1));
-            model.setGotup(cursor.getString(2));
+            modelWater.setWater(cursor.getString(0));
+            modelWater.setWakeup(cursor.getString(1));
+            modelWater.setGotup(cursor.getString(2));
 
             cursor.close();
-            return model;
+            return modelWater;
         }
         else {
             return null;

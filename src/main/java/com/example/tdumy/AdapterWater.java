@@ -12,12 +12,12 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class Adapter extends ArrayAdapter<Model> {
+public class AdapterWater extends ArrayAdapter<ModelWater> {
 
     private Context context;
     int resource;
 
-    public Adapter(Context context,int resource, ArrayList<Model> objects) {
+    public AdapterWater(Context context, int resource, ArrayList<ModelWater> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
@@ -31,7 +31,7 @@ public class Adapter extends ArrayAdapter<Model> {
         String wakeUp = getItem(position).getWakeup();
         String goToBed = getItem(position).getGotup();
 
-        Model model = new Model(water, wakeUp, goToBed);
+        ModelWater modelWater = new ModelWater(water, wakeUp, goToBed);
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView = inflater.inflate(resource, parent, false);
 
@@ -40,8 +40,8 @@ public class Adapter extends ArrayAdapter<Model> {
         TextView tvGoToBed = convertView.findViewById(R.id.gotobed);
 
         tvWater.setText(water + "ml");
-        tvWakeUp.setText(wakeUp + "am");
-        tvGoToBed.setText(goToBed + "pm");
+        tvWakeUp.setText(wakeUp );
+        tvGoToBed.setText(goToBed );
 
         return convertView;
     }

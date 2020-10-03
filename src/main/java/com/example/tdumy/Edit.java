@@ -1,17 +1,25 @@
 package com.example.tdumy;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Calendar;
+
 public class Edit extends AppCompatActivity {
 
-    EditText waterEdit,wakeupEdit,gotobedEdit;
+    EditText waterEdit;
+    TextView wakeupEdit,gotobedEdit;
+    int t3Hour,t3Minute,t4Hour,t4Minute;
     //Databse Row id
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +33,62 @@ public class Edit extends AppCompatActivity {
         waterEdit =  findViewById(R.id.waterE);
         wakeupEdit = findViewById(R.id.wakeupE);
         gotobedEdit = findViewById(R.id.gotobedE);
+
+        wakeupEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Initialize time picker dialog
+                TimePickerDialog timePickerDialog = new TimePickerDialog(
+                        Edit.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourofDay, int minute) {
+                                //Initialize hour and minute
+                                t3Hour = hourofDay;
+                                t3Minute = minute;
+                                //Initialize calender
+                                Calendar calendar = Calendar.getInstance();
+                                //Initialize hour and minute
+                                calendar.set(0,0,0,t3Hour,t3Minute);
+                                //set selected time on text view
+                                wakeupEdit.setText(DateFormat.format("hh:mm aa",calendar));
+                            }
+                        },12,0,false
+                );
+                //Display prious selected time
+                timePickerDialog.updateTime(t3Hour,t3Minute);
+                //show Dialog
+                timePickerDialog.show();
+            }
+        });
+
+        gotobedEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Initialize time picker dialog
+                TimePickerDialog timePickerDialog = new TimePickerDialog(
+                        Edit.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourofDay, int minute) {
+                                //Initialize hour and minute
+                                t4Hour = hourofDay;
+                                t4Minute = minute;
+                                //Initialize calender
+                                Calendar calendar = Calendar.getInstance();
+                                //Initialize hour and minute
+                                calendar.set(0,0,0,t4Hour,t4Minute);
+                                //set selected time on text view
+                                gotobedEdit.setText(DateFormat.format("hh:mm aa",calendar));
+                            }
+                        },12,0,false
+                );
+                //Display prious selected time
+                timePickerDialog.updateTime(t4Hour,t4Minute);
+                //show Dialog
+                timePickerDialog.show();
+            }
+        });
 
         //Set values
         waterEdit.setText(water);
