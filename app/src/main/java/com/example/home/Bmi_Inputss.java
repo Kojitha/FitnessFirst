@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -90,10 +91,34 @@ public class Bmi_Inputss extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                getData();
-                startActivity(new Intent(Bmi_Inputss.this, PlusButton.class));
-                Toast.makeText(Bmi_Inputss.this, "Added Successfully!", Toast.LENGTH_SHORT).show();
+                pNameEt = findViewById(R.id.personName);
+                pAgeEt = findViewById(R.id.personage);
+                pWeightEt = findViewById(R.id.personWeight);
+                pHeightEt = findViewById(R.id.personsHeight);
 
+                String pNameEt1 = pNameEt.getText().toString();
+                String pAgeEt1 = pAgeEt.getText().toString();
+                String pWeightEt1 = pWeightEt.getText().toString();
+                String  pHeightEt1  = pHeightEt.getText().toString();
+
+                if(TextUtils.isEmpty(pNameEt1)){
+                    Toast.makeText(Bmi_Inputss.this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
+                }
+                else if(TextUtils.isEmpty(pAgeEt1)) {
+                    Toast.makeText(Bmi_Inputss.this, "Please Enter Your Age", Toast.LENGTH_SHORT).show();
+                }
+                else if(TextUtils.isEmpty(pWeightEt1)){
+                    Toast.makeText(Bmi_Inputss.this, "Please Enter Your Gender", Toast.LENGTH_SHORT).show();
+                }
+                else if(TextUtils.isEmpty(pHeightEt1)){
+                    Toast.makeText(Bmi_Inputss.this, "Please Enter Your PhoneNumber", Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    getData();
+                    startActivity(new Intent(Bmi_Inputss.this, PlusButton.class));
+                    Toast.makeText(Bmi_Inputss.this, "Added Successfully!", Toast.LENGTH_SHORT).show();
+                }
             }
         } );
     }
