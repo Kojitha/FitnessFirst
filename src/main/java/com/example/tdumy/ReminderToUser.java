@@ -13,7 +13,7 @@ public class ReminderToUser extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "notifyLemubit")
                 .setSmallIcon(R.drawable.ic_baseline_add_alert_24)
                 .setContentTitle("Forgot to drink water?")
-                .setContentText("We'll remind you to drink water at the best time and you'll never miss it again!")
+                .setContentText("Drink a glass of water!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);

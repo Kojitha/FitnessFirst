@@ -11,6 +11,11 @@ public class ModelWater {
         this.gotup = gotup;
     }
 
+    public static String covertToLiters(String water){
+        double waters = Double.parseDouble(water);
+        String w1 = String.valueOf(waters/1000.0);
+        return w1;
+    }
     public String getWater() {
         return water;
     }

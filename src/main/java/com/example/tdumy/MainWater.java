@@ -46,7 +46,7 @@ public class MainWater extends AppCompatActivity {
         setContentView(R.layout.activity_water);
         myDB = new DatabaseCon(this);//Calling Constructor
 
-        createNotificationChannel();
+        //createNotificationChannel();
 
         //Geting values
         editwater = (EditText) findViewById(R.id.water);
@@ -150,15 +150,15 @@ public class MainWater extends AppCompatActivity {
                         boolean isInserted = myDB.insertData(editwater.getText().toString(), editwakeup.getText().toString(), editgotup.getText().toString());
                         if (isInserted == true) {
                             //Dialog Box
-                            loadingBar.setTitle("Successfully Inserted");
+                            /*loadingBar.setTitle("Successfully Inserted");
                             loadingBar.setMessage("Please wait");
                             loadingBar.setCanceledOnTouchOutside(true);
                             loadingBar.show();
+                             */
                             Intent intent = new Intent(MainWater.this, History.class);
                             startActivity(intent);
-                            loadingBar.dismiss();
 
-                            Intent intent1 = new Intent(MainWater.this,ReminderToUser.class);
+                            /*Intent intent1 = new Intent(MainWater.this,ReminderToUser.class);
                             PendingIntent pendingIntent = PendingIntent.getBroadcast(MainWater.this,0,intent1,0);
 
                             AlarmManager alarmManager =(AlarmManager) getSystemService(ALARM_SERVICE);
@@ -168,7 +168,7 @@ public class MainWater extends AppCompatActivity {
                             alarmManager.set(AlarmManager.RTC_WAKEUP,
                                     timeAtButtonClick + oneseconds,
                                     pendingIntent);
-
+                            */
 
                         } else {
                             Toast.makeText(MainWater.this, "Not Inserted", Toast.LENGTH_LONG).show();
@@ -184,7 +184,7 @@ public class MainWater extends AppCompatActivity {
 
 
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+   /* @RequiresApi(api = Build.VERSION_CODES.O)
     private void createNotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BASE) {
@@ -198,7 +198,7 @@ public class MainWater extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
+    */
 
 
 

@@ -39,7 +39,9 @@ public class AdapterWater extends ArrayAdapter<ModelWater> {
         TextView tvWakeUp = convertView.findViewById(R.id.wakeup);
         TextView tvGoToBed = convertView.findViewById(R.id.gotobed);
 
-        tvWater.setText(water + "ml");
+        String w1 = ModelWater.covertToLiters(water);
+
+        tvWater.setText(w1+ "l");
         tvWakeUp.setText(wakeUp );
         tvGoToBed.setText(goToBed );
 

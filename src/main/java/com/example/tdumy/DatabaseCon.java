@@ -95,23 +95,5 @@ public class DatabaseCon extends SQLiteOpenHelper {
         statement.execute();
     }
 
-    public ModelWater selectModel(String id) {
-        sqLiteDatabase = getReadableDatabase();
-        ModelWater modelWater = new ModelWater();
 
-        String select = "SELECT * FROM " +TABLE_NAME + " WHERE " + COL_1;
-        Cursor cursor = sqLiteDatabase.rawQuery(select, null);
-
-        if (cursor.moveToFirst() ) {
-            modelWater.setWater(cursor.getString(0));
-            modelWater.setWakeup(cursor.getString(1));
-            modelWater.setGotup(cursor.getString(2));
-
-            cursor.close();
-            return modelWater;
-        }
-        else {
-            return null;
-        }
-    }
 }
