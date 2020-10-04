@@ -50,6 +50,8 @@ public class BMI_Calculator extends AppCompatActivity {
         calculation = "Result: \n\n" + bmi + "\n" + BMIresult;
         resulttext.setText(calculation);
 
+
+
     }
 
 
@@ -70,3 +72,4 @@ public class BMI_Calculator extends AppCompatActivity {
 
 
 }
+

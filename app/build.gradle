@@ -38,5 +38,15 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.basgeekball:awesome-validation:4.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+	  implementation 'com.basgeekball:awesome-validation:4.2'
 
+    //TEST CASE
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+	 
+	 
 }

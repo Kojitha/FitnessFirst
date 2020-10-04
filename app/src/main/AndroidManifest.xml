@@ -4,15 +4,22 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+	
+	
+	
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/gym"
+        android:icon="@drawable/logostore"
         android:label="Fitness First"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loosebiceps"></activity>
+        <activity android:name=".loosebiceps"/>
         <activity android:name=".looselegs" />
         <activity android:name=".looseshoulders" />
         <activity android:name=".loosechest" />
@@ -33,13 +40,43 @@
         <activity android:name=".Excercises" />
         <activity android:name=".BMI_OUTPUTSS" />
         <activity android:name=".Bmi_Inputss" />
+		
+		<!--SHALITHA -->
+		
+		<activity android:name=".MainWater"></activity>
+        <activity android:name=".History"></activity>
+        <activity android:name=".Edit"></activity>
+
+        <receiver android:name=".ReminderToUser"/>
+		
+		<!--SUMIRA_SENA -->
+		
+		 <activity android:name=".SearchCalories"></activity>
+        <activity android:name=".EditCalories" />
+        <activity android:name=".AddCalories" />
+        <activity android:name=".CaloriesActivity"></activity>
+		
+		<!--KOJJA-->
+		 <activity android:name=".step_record"></activity>
+        <activity android:name=".EditStep" />
+        <activity android:name=".End_Workout" />
+        <activity android:name=".ListStep" />
+        <activity android:name=".StepCounter">
+            
+        </activity>
+		
+		
+		
+		
+		
+		
+		
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

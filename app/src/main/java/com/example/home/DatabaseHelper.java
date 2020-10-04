@@ -69,6 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    //Retrieve information
     public ArrayList<Model> getAllData(String orderBy) {
 
         ArrayList<Model> arrayList = new ArrayList<>();
@@ -98,6 +99,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.close();
         return arrayList;
-
     }
 }

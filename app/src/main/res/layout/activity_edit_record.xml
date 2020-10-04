@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Enter Your Details"
+        android:text="Update Your Details"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="36sp"

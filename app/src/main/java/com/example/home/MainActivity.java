@@ -24,6 +24,21 @@ public class MainActivity extends AppCompatActivity {
     }
     //
 
+    public void gotowaterinput (View view){
+        Intent intent = new Intent (this, MainWater.class);
+        startActivity(intent);
+    }
+
+    public void gotocalorieactivity (View view){
+        Intent intent = new Intent (this, CaloriesActivity.class);
+        startActivity(intent);
+    }
+
+    public void gotostep (View view){
+        Intent intent = new Intent (this, com.example.home.StepCounter.class);
+        startActivity(intent);
+    }
+
 
 
 }
